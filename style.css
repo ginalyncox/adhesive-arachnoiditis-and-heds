@@ -1044,6 +1044,16 @@ blockquote cite {
   color: var(--color-text-inverse);
   font-weight: 600;
 }
+.memoriam__body a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  font-style: normal;
+}
+.memoriam__body a:hover {
+  color: var(--color-primary-hover);
+}
 
 /* ===== FOOTER ===== */
 

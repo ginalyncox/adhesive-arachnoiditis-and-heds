@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wheelchair Evaluation Checklist — AA and hEDS</title>
+    <meta name="description" content="A printable checklist for a wheelchair and seating evaluation with adhesive arachnoiditis and hypermobile EDS." />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&f[]=cabinet-grotesk@500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <style>
+      :root {
+        --ink: #1a1c22;
+        --muted: #5a5d66;
+        --line: #c9c6bc;
+        --accent: #6a1f2a;
+        --bg: #f5f4ef;
+        --paper: #ffffff;
+        --serif: 'Source Serif 4', Georgia, serif;
+        --sans: 'General Sans', 'Inter', system-ui, sans-serif;
+        --display: 'Cabinet Grotesk', 'General Sans', system-ui, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--serif);
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      .sheet {
+        max-width: 8.5in;
+        margin: 32px auto;
+        background: var(--paper);
+        padding: 0.6in 0.7in;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.06);
+      }
+      .toolbar {
+        max-width: 8.5in;
+        margin: 24px auto 0;
+        display: flex;
+        gap: 12px;
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--sans);
+        font-size: 14px;
+        padding: 0 4px;
+      }
+      .toolbar a { color: var(--accent); }
+      .toolbar button {
+        font: 600 14px var(--sans);
+        background: var(--accent);
+        color: #fff;
+        border: 0;
+        border-radius: 999px;
+        padding: 10px 22px;
+        cursor: pointer;
+      }
+      .toolbar button:hover { background: #4f1620; }
+      header.top {
+        border-bottom: 2px solid var(--ink);
+        padding-bottom: 12px;
+        margin-bottom: 18px;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        align-items: flex-end;
+      }
+      h1 {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.1;
+        margin: 0;
+      }
+      .eyebrow {
+        font: 600 11px var(--sans);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 6px;
+      }
+      .ident {
+        font-family: var(--sans);
+        font-size: 13px;
+        min-width: 2.6in;
+      }
+      .ident div { display: flex; gap: 8px; margin-top: 6px; }
+      .ident span.fill { flex: 1; border-bottom: 1px solid var(--ink); }
+      h2 {
+        font-family: var(--display);
+        font-size: 17px;
+        font-weight: 700;
+        margin: 22px 0 8px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+      }
+      h2 .n { font-family: var(--sans); font-size: 12px; color: var(--accent); }
+      p.note { font-size: 13px; color: var(--muted); margin: 4px 0 8px; }
+      ul.check { list-style: none; padding: 0; margin: 0; }
+      ul.check li {
+        display: grid;
+        grid-template-columns: 18px 1fr;
+        gap: 10px;
+        padding: 5px 0;
+        border-bottom: 1px dotted var(--line);
+        break-inside: avoid;
+      }
+      ul.check li::before {
+        content: '';
+        width: 13px;
+        height: 13px;
+        border: 1.5px solid var(--ink);
+        border-radius: 2px;
+        margin-top: 4px;
+      }
+      sup { font-family: var(--sans); font-size: 9px; color: var(--accent); }
+      .fill-line {
+        display: inline-block;
+        border-bottom: 1px solid var(--ink);
+        min-width: 0.9in;
+        height: 1em;
+        vertical-align: bottom;
+      }
+      .fill-line.wide { min-width: 2.4in; }
+      .two-col .fill-line { min-width: 0.7in; }
+      ul.check li > span { white-space: normal; }
+      .lines { margin: 6px 0 4px; }
+      .lines div { border-bottom: 1px solid var(--line); height: 26px; }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: var(--sans);
+        font-size: 13px;
+        margin-top: 6px;
+      }
+      th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+      th { background: #f1efe8; font-weight: 600; }
+      td.blank { height: 26px; }
+      .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+      .disclaimer {
+        margin-top: 24px;
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        font-family: var(--sans);
+        font-size: 12px;
+        color: var(--muted);
+      }
+      ol.sources { font-family: var(--sans); font-size: 11px; color: var(--muted); padding-left: 18px; margin: 8px 0 0; }
+      ol.sources a { color: var(--muted); overflow-wrap: anywhere; }
+      .page-break { break-before: page; }
+      @media (max-width: 640px) {
+        .sheet { padding: 24px 20px; margin: 12px; }
+        header.top { flex-direction: column; align-items: stretch; }
+        .two-col { grid-template-columns: 1fr; }
+      }
+      @media print {
+        @page { size: letter; margin: 0.5in; }
+        body { background: #fff; font-size: 11.5pt; }
+        .toolbar { display: none; }
+        .sheet { box-shadow: none; margin: 0; padding: 0; max-width: none; }
+        a { color: inherit; text-decoration: none; }
+        h2 { break-after: avoid; }
+        table, tr { break-inside: avoid; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <a href="./index.html#seating">← Back to the seating section</a>
+      <button type="button" onclick="window.print()">Print checklist</button>
+    </div>
+
+    <main class="sheet">
+      <header class="top">
+        <div>
+          <p class="eyebrow">AA + hEDS research review · companion sheet</p>
+          <h1>Wheelchair &amp; seating evaluation checklist</h1>
+        </div>
+        <div class="ident">
+          <div>Name <span class="fill"></span></div>
+          <div>Evaluation date <span class="fill"></span></div>
+          <div>Clinic / supplier <span class="fill"></span></div>
+        </div>
+      </header>
+
+      <p class="note">
+        Bring this to a seating clinic appointment with a physiatrist, OT or PT, and a credentialed supplier.
+        Check items as they're covered and write in your own numbers. Superscripts refer to the sources at the end.
+      </p>
+
+      <h2><span class="n">01</span> Record before the appointment</h2>
+      <div class="two-col">
+        <ul class="check">
+          <li><span>Minutes I can sit before pain builds: <span class="fill-line"></span></span></li>
+          <li><span>Minutes I can stand before pain builds: <span class="fill-line"></span><sup>4</sup></span></li>
+          <li><span>Relieves pain: standing / reclining / lying down / walking (circle)</span></li>
+          <li><span>Where pain is worst when seated (low back, buttocks, tailbone, legs, pelvis)</span></li>
+          <li><span>Joints that sublux or dislocate: <span class="fill-line"></span></span></li>
+          <li><span>Shoulder, elbow, wrist, or hand pain with pushing or gripping</span></li>
+        </ul>
+        <ul class="check">
+          <li><span>Orthostatic symptoms (dizziness, racing heart, fainting) and any POTS diagnosis</span></li>
+          <li><span>Leg or foot swelling by end of day</span></li>
+          <li><span>Pelvic-floor findings (tenderness on exam, pain with sitting or intercourse)</span></li>
+          <li><span>Falls or near-falls in the last 3 months: <span class="fill-line"></span></span></li>
+          <li><span>Current mobility aids and how often used</span></li>
+          <li><span>Relevant imaging (lumbar MRI findings, Tarlov cysts, etc.)</span></li>
+        </ul>
+      </div>
+      <p class="note">Where will the chair be used? Check all that apply.</p>
+      <ul class="check two-col">
+        <li><span>Home (doorway widths, thresholds, bathroom)</span></li>
+        <li><span>Car — make/model: <span class="fill-line"></span></span></li>
+        <li><span>Campus or work</span></li>
+        <li><span>Outdoors (gravel, grass, slopes, curbs)</span></li>
+        <li><span>Public transit or air travel</span></li>
+        <li><span>Who can help with lifting or loading: <span class="fill-line"></span></span></li>
+      </ul>
+
+      <h2><span class="n">02</span> Ask the team to assess</h2>
+      <ul class="check">
+        <li><span>Mat exam lying down and sitting: pelvic tilt, obliquity, rotation, and whether each is flexible or fixed<sup>2,3</sup></span></li>
+        <li><span>Spinal alignment, sitting balance, and range of motion at hips, knees, ankles, and spine<sup>2,3</sup></span></li>
+        <li><span>Hamstring tightness and the knee angle that lets my pelvis sit neutral<sup>3</sup></span></li>
+        <li><span>Upper-limb strength and pain with propulsion, including shoulder stability<sup>2</sup></span></li>
+        <li><span>Skin and pressure risk, with pressure mapping on candidate cushions<sup>3</sup></span></li>
+        <li><span>Whether I can do my own weight shifts, and for how long<sup>1,3</sup></span></li>
+      </ul>
+
+      <h2><span class="n">03</span> Base types to trial</h2>
+      <table>
+        <thead>
+          <tr><th style="width:26%">Type</th><th>Trialed?</th><th>Pain with use (0–10)</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Ultralight manual (under 30 lb)<sup>2</sup></td><td class="blank"></td><td></td><td></td></tr>
+          <tr><td>Power-assist manual<sup>2</sup></td><td class="blank"></td><td></td><td></td></tr>
+          <tr><td>Power wheelchair<sup>2</sup></td><td class="blank"></td><td></td><td></td></tr>
+          <tr><td>Scooter (if relevant)<sup>2</sup></td><td class="blank"></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <p class="note">RESNA recommends product trials before final selection, ideally in the environments you'll use.<sup>3</sup></p>
+
+      <h2><span class="n">04</span> Seat functions to trial</h2>
+      <ul class="check">
+        <li><span>Power tilt-in-space reaching at least 30° (smaller tilts did not reduce sit-bone pressure in cited studies) — max tested: <span class="fill-line"></span><sup>1</sup></span></li>
+        <li><span>Power recline, used together with tilt — range tested: <span class="fill-line"></span><sup>1</sup></span></li>
+        <li><span>Power elevating leg rests, always paired with recline<sup>1</sup></span></li>
+        <li><span>Standing function — standing tolerance tested first<sup>2</sup></span></li>
+        <li><span>Seat elevator for transfers and reaching<sup>2,3</sup></span></li>
+        <li><span>Programmed sequence for returning upright: recline → leg rests → tilt<sup>1</sup></span></li>
+        <li><span>Tilt reminder schedule agreed (one cited study: every 30 min for at least 1–2 min)<sup>1</sup></span></li>
+      </ul>
+
+      <h2><span class="n">05</span> Pelvic positioning and seating components</h2>
+      <ul class="check">
+        <li><span>Seat depth set about 2 inches short of the back of the knee<sup>2</sup></span></li>
+        <li><span>Seat width: hips/thighs plus 1–2 inches total<sup>2</sup></span></li>
+        <li><span>Seat slope (“dump”) set and recorded: <span class="fill-line"></span><sup>2</sup></span></li>
+        <li><span>Cushion type chosen with pressure mapping; contours or build-ups for any obliquity or subluxing hip<sup>2,3</sup></span></li>
+        <li><span>Solid or contoured back with posterior pelvic support<sup>2,3</sup></span></li>
+        <li><span>Pelvic belt or anterior pelvic support for stability<sup>2,3</sup></span></li>
+        <li><span>Footrest height 1–2 in above floor and angle set so hamstrings don't pull the pelvis back<sup>2,3</sup></span></li>
+        <li><span>Armrests at about 30° shoulder flexion and 60° elbow flexion<sup>2</sup></span></li>
+        <li><span>If manual: axle position, ergonomic handrims, and rigid frame reviewed<sup>2,3</sup></span></li>
+      </ul>
+
+      <h2><span class="n">06</span> Measurements recorded</h2>
+      <table>
+        <thead><tr><th>Measurement</th><th>Value</th><th>Measurement</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Seat width</td><td class="blank"></td><td>Seat-to-floor height</td><td></td></tr>
+          <tr><td>Seat depth</td><td class="blank"></td><td>Back height</td><td></td></tr>
+          <tr><td>Seat slope / dump</td><td class="blank"></td><td>Footrest length</td><td></td></tr>
+          <tr><td>Seat-to-back angle</td><td class="blank"></td><td>Armrest height</td><td></td></tr>
+        </tbody>
+      </table>
+
+      <h2><span class="n">07</span> Team, paperwork, and timeline</h2>
+      <ul class="check">
+        <li><span>Licensed clinician (OT/PT) involved in the evaluation: <span class="fill-line wide"></span><sup>1</sup></span></li>
+        <li><span>Supplier holds RESNA ATP or SMS credential: <span class="fill-line wide"></span><sup>1</sup></span></li>
+        <li><span>Face-to-face mobility exam documented by prescriber (power mobility) — date: <span class="fill-line"></span><sup>2</sup></span></li>
+        <li><span>Order sent to supplier within 45 days of exam — date: <span class="fill-line"></span><sup>2</sup></span></li>
+        <li><span>Delivery within 120 days — expected date: <span class="fill-line"></span><sup>2</sup></span></li>
+        <li><span>Letter of medical necessity covering sitting intolerance, upper-limb limits, and orthostatic symptoms<sup>5</sup></span></li>
+        <li><span>Insurance prior authorization status: <span class="fill-line wide"></span></span></li>
+      </ul>
+
+      <h2><span class="n">08</span> At delivery and follow-up</h2>
+      <ul class="check">
+        <li><span>Fitting confirms pelvis sits neutral and level; pressure map repeated on final setup<sup>3</sup></span></li>
+        <li><span>Training on seat functions, the return-to-upright order, and tilt schedule<sup>1,3</sup></span></li>
+        <li><span>Follow-up scheduled (RESNA case examples used one month) — date: <span class="fill-line"></span><sup>3</sup></span></li>
+        <li><span>Refit triggers noted: weight change, progression, new condition, new environments<sup>3</sup></span></li>
+        <li><span>Plan to keep active out of the chair to limit deconditioning<sup>6</sup></span></li>
+      </ul>
+
+      <p class="note" style="margin-top:14px">Questions for the team:</p>
+      <div class="lines"><div></div><div></div><div></div><div></div></div>
+
+      <div class="disclaimer">
+        Educational material, not medical advice. Equipment choices, angles, and settings must be determined by your
+        seating team based on an individual evaluation. From the research review at
+        ginalyncox.github.io/adhesive-arachnoiditis-and-heds.
+      </div>
+
+      <ol class="sources">
+        <li>RESNA. Position on the Application of Tilt, Recline, and Elevating Leg Rests for Wheelchairs: Literature Update 2023 (approved Feb 26, 2025). <a href="https://0201.nccdn.net/1_2/000/000/117/599/resna-position-on-the-application-of-tilt-recline-2025.pdf">0201.nccdn.net/…/resna-position-on-the-application-of-tilt-recline-2025.pdf</a></li>
+        <li>Doan T, Delaney K, Manguinao M. Wheelchair and Power Mobility for Adults. AAPM&amp;R KnowledgeNow (updated Jan 9, 2025). <a href="https://now.aapmr.org/wheelchair-and-power-mobility/">now.aapmr.org/wheelchair-and-power-mobility</a></li>
+        <li>Arledge S, et al. RESNA Wheelchair Service Provision Guide (2011). <a href="https://www.resna.org/Portals/0/Documents/Position%20Papers/RESNAWheelchairServiceProvisionGuide.pdf">resna.org/…/RESNAWheelchairServiceProvisionGuide.pdf</a></li>
+        <li>Tennant F, Porcelli MJ, Guess KS. Adhesive Arachnoiditis: A Clinical Update (2020). <a href="https://arachnoiditishope.com/wp-content/uploads/2026/01/AA-Clinical-Update-2020.pdf">arachnoiditishope.com/…/AA-Clinical-Update-2020.pdf</a></li>
+        <li>hEDS Info. Assistive Devices (patient-education site, not peer reviewed). <a href="https://www.hedsinfo.com/heds/assistive-devices">hedsinfo.com/heds/assistive-devices</a></li>
+        <li>The Ehlers-Danlos Society. Braces, Splints &amp; Mobility Aids. <a href="https://www.ehlers-danlos.com/braces-splints-mobility-aids/">ehlers-danlos.com/braces-splints-mobility-aids</a></li>
+      </ol>
+    </main>
+  </body>
+</html>
